@@ -24,6 +24,7 @@ return function (App $app) {
     // api
     $container['api'] = function ($c){
         $api = $c->get('settings')['api'];
+        $api['api_url'] = $api['base_url'] . '/api/' . $api['version'];
         return $api;
     };
 
