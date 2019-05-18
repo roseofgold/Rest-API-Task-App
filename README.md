@@ -2,25 +2,21 @@
 
 ## Features
 - [ ] Routes
-    - [ ] [GET] /api/v1/todos
-        - [ ] Fetch and return all ToDos in the system
-    - [ ] [POST] /api/v1/todos
-        - [ ] Create ToDo
-        - [ ] Set proper status code
-    - [ ] [GET] /api/v1/todos/{id}
-    - [ ] [PUT] /api/v1/todos/{id}
-        - [ ] Update existing ToDo
-    - [ ] [DELETE] /api/v1/todos/{id}
-        - [ ] Delete ToDo
-        - [ ] Return message saying ToDo is deleted with proper status code
+    - [x] View All Tasks ([GET] /api/v1/todos)
+    - [x] Create New Task with status code ([POST] /api/v1/todos)
+    - [x] View Specific Task ([GET] /api/v1/todos/{id})
+    - [x] Update Specific Task ([PUT] /api/v1/todos/{id})
+    - [x] Delete Specific Task ([DELETE] /api/v1/todos/{id})
+        - [x] Delete Task
+        - [x] Return message saying Task is deleted
 - [ ] Task Model
-    - [ ] Store ID
-    - [ ] Store Name
-    - [ ] Store Status
+    - [x] Store Task_ID
+    - [x] Store Name
+    - [x] Store Status
     - [ ] Store Due date (Bonus)
     - [ ] Store Project (Bonus)
     - [ ] Store Priority (Bonus)
-- [ ] Connect to database
+- [x] Connect to database
 - [ ] Unit Tests on all methods (Bonus)
 
 ## Support
