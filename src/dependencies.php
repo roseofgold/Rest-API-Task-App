@@ -37,6 +37,6 @@ return function (App $app) {
 
     // todo model
     $container['todo'] = function ($c) {
-        return new App\Model\ToDo($c->get('db'));
+        return new ToDo($c->get('db'));
     };
 };
