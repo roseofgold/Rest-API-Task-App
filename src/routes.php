@@ -24,6 +24,28 @@ return function (App $app) {
             // return all todos
             $result = $this->todo->getAllToDos();
             return $response->withJson($result, 200, JSON_PRETTY_PRINT);
-        });    
+        }); 
+        $app->get('/{task_id}', function (Request $request, Response $response, array $args) use ($container) {
+            // return a single todo
+            $result = $this->todo->getToDo($args['task_id']);
+            return $response->withJson($result, 200, JSON_PRETTY_PRINT);
+        });
+        $app->post('', function (Request $request, Response $response, array $args) use ($container) {
+            // create a todo
+            $result = $this->todo->createToDo($request->getParsedBody());
+            return $response->withJson($result, 201, JSON_PRETTY_PRINT);
+        });
+        $app->put('/{task_id}', function (Request $request, Response $response, array $args) use ($container) {
+            // update a todo
+            $data = $request->getParsedBody();
+            $data['task_id'] = $args['task_id'];
+            $result = $this->todo->updateToDo($data);
+            return $response->withJson($result, 201, JSON_PRETTY_PRINT);
+        });
+        $app->delete('/{task_id}', function (Request $request, Response $response, array $args) use ($container) {
+            // return a single todo
+            $result = $this->todo->deleteToDo($args['task_id']);
+            return $response->withJson($result, 200, JSON_PRETTY_PRINT);
+        });
     });
 };

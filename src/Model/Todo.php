@@ -47,9 +47,9 @@ class ToDo
         );
         $statement->bindParam('task', $data['task']);
         $statement->bindParam('status', $data['status']);
-        $statement->bindParam('id', $data['id']);
+        $statement->bindParam('id', $data['task_id']);
         $statement->execute();
-        return $this->getToDo($data['id']);
+        return $this->getToDo($data['task_id']);
     }
     
     public function deleteToDo($task_id)
