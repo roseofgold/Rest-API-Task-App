@@ -1,6 +1,7 @@
 <?php
 
 use Slim\App;
+use App\Model\ToDo;
 
 return function (App $app) {
     $container = $app->getContainer();
