@@ -34,4 +34,9 @@ return function (App $app) {
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
     };
+
+    // course model
+    $container['todo'] = function ($c) {
+        return new App\Model\ToDo($c->get('db'));
+    };
 };
