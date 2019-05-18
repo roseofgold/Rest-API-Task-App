@@ -35,7 +35,7 @@ return function (App $app) {
         return $pdo;
     };
 
-    // course model
+    // todo model
     $container['todo'] = function ($c) {
         return new App\Model\ToDo($c->get('db'));
     };
