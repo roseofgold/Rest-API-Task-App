@@ -3,17 +3,25 @@
 ## Features
 - [ ] Routes
     - [ ] [GET] /api/v1/todos
-        - [ ] Fetch and return all To Dos in the system
+        - [ ] Fetch and return all ToDos in the system
     - [ ] [POST] /api/v1/todos
-        - [ ] Create To Do
+        - [ ] Create ToDo
         - [ ] Set proper status code
     - [ ] [GET] /api/v1/todos/{id}
     - [ ] [PUT] /api/v1/todos/{id}
-        - [ ] Update existing To Do
+        - [ ] Update existing ToDo
     - [ ] [DELETE] /api/v1/todos/{id}
-        - [ ] Delete To Do
-        - [ ] Return message saying To Do is deleted with proper status code
-
+        - [ ] Delete ToDo
+        - [ ] Return message saying ToDo is deleted with proper status code
+- [ ] Task Model
+    - [ ] Store ID
+    - [ ] Store Name
+    - [ ] Store Status
+    - [ ] Store Due date (Bonus)
+    - [ ] Store Project (Bonus)
+    - [ ] Store Priority (Bonus)
+- [ ] Connect to database
+- [ ] Unit Tests on all methods (Bonus)
 
 ## Support
 Contact: roseofgold@gmail.com
