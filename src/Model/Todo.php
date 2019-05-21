@@ -32,10 +32,13 @@ class ToDo
     public function createToDo($data)
     {
         $statement = $this->database->prepare(
-            'INSERT INTO tasks (task,status) VALUES (:task,:status)'
+            'INSERT INTO tasks (task,status,due_date,project,priority) VALUES (:task,:status,:due_date,:project,:priority)'
         );
         $statement->bindParam('task', $data['task']);
         $statement->bindParam('status', $data['status']);
+        $statement->bindParam('due_date',$data['due_date']);
+        $statement->bindParam('project',$data['project']);
+        $statement->bindParam('priority',$data['priority']);
         $statement->execute();
         return $this->getToDo($this->database->lastInsertID());
     }
@@ -43,11 +46,14 @@ class ToDo
     public function updateToDo($data)
     {
         $statement = $this->database->prepare(
-            'UPDATE tasks SET task=:task, status=:status WHERE id=:id'
+            'UPDATE tasks SET task=:task, status=:status, due_date:due_date, project:project, priority:priority WHERE id=:id'
         );
         $statement->bindParam('task', $data['task']);
         $statement->bindParam('status', $data['status']);
         $statement->bindParam('id', $data['task_id']);
+        $statement->bindParam('due_date',$data['due_date']);
+        $statement->bindParam('project',$data['project']);
+        $statement->bindParam('priority',$data['priority']);
         $statement->execute();
         return $this->getToDo($data['task_id']);
     }
