@@ -4,15 +4,16 @@ namespace App\Model;
 use PHPUnit\Framework\TestCase;
 
 class TodoTest extends TestCase
-{    
-    /** @test */
-    public function toDoCreatedWithMinimum()
+{
+    /** @test to retreive all tasks*/
+    public function testRetrieveAllToDos()
     {
         $data = [
-            'task' => "Task at Hand",
-            'status' => 0,
+            'id' => 1,
+            'task' => 'Test Title',
+            'status' => '1'
         ];
-        $listing = new ToDo($data);
-        $this->assertIsObject($listing);
+        $response = new Todo();
+        $this->assertEquals(200, $response->getStatusCode());
     }
 }
