@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "9b52010e-3a59-44ec-8ae3-fc08395abc9b",
+		"name": "to-do-rest-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Task 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/tasks/4",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"task\":\"TechDegree Adding Post Task\",\n\t\"status\": \"1\",\n\t\"due_date\": \"2019-07-08\",\n\t\"project\":\"TechDegree API\",\n\t\"priority\":\"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost/api/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task\": \"TechDegree Updating Posted Task\",\n    \"status\": \"1\",\n    \"due_date\":\"2019-03-18\",\n\t\"project\":\"TechDegree Unit 1\",\n\t\"priority\":\"0\"\n}"
+				},
+				"url": {
+					"raw": "localhost/api/v1/tasks/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task 5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/v1/tasks/5",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
