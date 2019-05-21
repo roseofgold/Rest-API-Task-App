@@ -13,9 +13,9 @@
     - [x] Store Task_ID
     - [x] Store Name
     - [x] Store Status
-    - [ ] Store Due date (Bonus)
-    - [ ] Store Project (Bonus)
-    - [ ] Store Priority (Bonus)
+    - [x] Store Due date (Bonus)
+    - [x] Store Project (Bonus)
+    - [x] Store Priority (Bonus)
 - [x] Connect to database
 - [ ] Unit Tests on all methods (Bonus)
 
