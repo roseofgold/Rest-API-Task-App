@@ -46,7 +46,7 @@ class ToDo
     public function updateToDo($data)
     {
         $statement = $this->database->prepare(
-            'UPDATE tasks SET task=:task, status=:status, due_date:due_date, project:project, priority:priority WHERE id=:id'
+            'UPDATE tasks SET task=:task, status=:status, due_date=:due_date, project=:project, priority=:priority WHERE id=:id'
         );
         $statement->bindParam('task', $data['task']);
         $statement->bindParam('status', $data['status']);
