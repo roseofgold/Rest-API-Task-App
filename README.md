@@ -1,7 +1,7 @@
-# PHP Techdegree Project 7 - To Do API
+# Rest API Task App
 
 ## Features
-- [ ] Routes
+- [x] Routes
     - [x] View All Tasks ([GET] /api/v1/todos)
     - [x] Create New Task with status code ([POST] /api/v1/todos)
     - [x] View Specific Task ([GET] /api/v1/todos/{id})
@@ -9,7 +9,7 @@
     - [x] Delete Specific Task ([DELETE] /api/v1/todos/{id})
         - [x] Delete Task
         - [x] Return message saying Task is deleted
-- [ ] Task Model
+- [x] Task Model
     - [x] Store Task_ID
     - [x] Store Name
     - [x] Store Status
